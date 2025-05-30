@@ -2,8 +2,6 @@ ChatCmd - 强大的聊天指令触发器
 最新版本：v1.4.1
 支持版本：Paper/Spigot 1.17+
 依赖：PlaceholderAPI (可选)
-下载量： 点击下载最新版本
-源码仓库： GitHub
 
 🌟 核心功能
 ChatCmd 是一款革命性的聊天指令插件，允许玩家通过聊天内容触发复杂的指令序列。不同于传统命令插件，ChatCmd 提供：
@@ -144,18 +142,8 @@ A: 确保已安装 PlaceholderAPI 并在配置中使用正确格式：%placehold
 Q: 如何让所有消息都触发指令？
 A: 在配置中设置 MessageCommand.Enabled: true
 
-💬 用户评价
-"ChatCmd 彻底改变了我们的游戏体验！现在玩家可以通过聊天获得奖励，管理从未如此简单" - 服务器主 @DreamCity
-
-"延迟+概率的组合功能太棒了，我们用它创建了随机事件系统" - 技术员 @RedstoneMaster
-
-"最好的聊天指令插件！配置直观，文档完善，作者响应迅速" - 开发者 @PluginLover
 
 📞 支持与反馈
 遇到问题？需要定制功能？欢迎联系我们：
 
-Discord 支持群: 点击加入
-
-问题报告: GitHub Issues
-
-邮箱: support@xiaojixiang.xyz
+QQ 支持群: 549260413
