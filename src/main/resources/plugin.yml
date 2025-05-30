@@ -1,0 +1,18 @@
+name: ChatCmd
+version: 1.4.0  # 版本升级
+main: xyz.xiaojixiang.chatcmd.ChatCmd
+api-version: 1.21
+authors: [小吉祥]
+commands:
+  ccmd:
+    description: 重新加载配置
+    permission: chatcmd.reload
+    usage: /ccmd reload
+permissions:
+  chatcmd.reload:
+    description: 允许重新加载插件配置
+    default: op
+  chatcmd.groups.*:
+    description: 所有关键词组权限
+    default: false
+softdepend: [PlaceholderAPI]

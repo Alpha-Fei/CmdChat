@@ -1,0 +1,30 @@
+# 作者: 小吉祥
+# 本插件用于检测玩家消息中的关键词并触发设定指令
+# groups: 关键词组，每组可配置多个关键词和多种执行方式的指令
+#关键词检测：检测到关键词执行指令
+groups:
+  - # 关键词组1
+    keywords: [ '测试', 'hello' ] # 关键词列表，任意一个命中即触发
+    # 无permission字段时无需权限
+    player: # 以玩家身份执行的指令列表
+      - '[0.5] say %player% 触发了关键词 %keyword%，原消息: %message%' # 0.5秒后执行
+    console: # 以控制台身份执行的指令列表
+      - '[0] broadcast [控制台] %player% 说了: %message%' #立即执行
+    op: # 以OP身份执行的指令列表
+      - '[1.5] [50%] me 以OP身份触发了 %keyword%' # 1.5秒后会有50%的概率执行
+  - # 关键词组2
+    keywords: [ '示例' ]
+    permission: chatcmd.groups.test # 若配置了权限则该组只有拥有该权限的玩家才能触发
+    player: []
+    console: [ 'say %player% 触发了示例' ]
+    op: []
+#消息检测：当玩家发送消息时执行指令
+MessageCommand:
+  Enabled: false
+  player: # 以玩家身份执行的指令列表
+    - '[0.5] me 我发送了一个消息%message%' # 0.5秒后执行
+  console: # 以控制台身份执行的指令列表
+    - '[0] broadcast [控制台] %player% 说了: %message%' #立即执行
+  op: # 以OP身份执行的指令列表
+    - '[1.5] [50%] say %player%发送了一个消息' # 1.5秒后会有50%的概率执行
+# 占位符说明：%player% 玩家名，%message% 玩家消息，%keyword% 触发的关键词，可用PlaceholderAPI变量
