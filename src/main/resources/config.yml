@@ -1,6 +1,20 @@
 # 作者: 小吉祥
 # 本插件用于检测玩家消息中的关键词并触发设定指令
 # groups: 关键词组，每组可配置多个关键词和多种执行方式的指令
+
+#玩家消息统计
+Statistics:
+  Enable: true
+  Database:
+    Type: SQLite # MySQL 或 SQLite
+    Table: chat_statistics # 表名
+    MySQL:
+      Host: localhost
+      Port: 3306
+      Database: minecraft
+      Username: root
+      Password: ""
+GlobalAndKeywords: true  # true: 同时触发，false: 关键词触发时不触发全局检测
 #关键词检测：检测到关键词执行指令
 groups:
   - # 关键词组1
@@ -18,7 +32,7 @@ groups:
     player: []
     console: [ 'say %player% 触发了示例' ]
     op: []
-#消息检测：当玩家发送消息时执行指令
+#全局消息检测：当玩家发送消息时执行指令
 MessageCommand:
   Enabled: false
   player: # 以玩家身份执行的指令列表
@@ -28,3 +42,4 @@ MessageCommand:
   op: # 以OP身份执行的指令列表
     - '[1.5] [50%] say %player%发送了一个消息' # 1.5秒后会有50%的概率执行
 # 占位符说明：%player% 玩家名，%message% 玩家消息，%keyword% 触发的关键词，可用PlaceholderAPI变量
+UpdateCheck: true  # 是否启用更新检查
