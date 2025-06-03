@@ -1,7 +1,7 @@
 name: ChatCmd
-version: 1.4.0  # 版本升级
+version: 1.4.5  # 版本升级
 main: xyz.xiaojixiang.chatcmd.ChatCmd
-api-version: 1.21
+api-version: 1.17
 authors: [小吉祥]
 commands:
   ccmd:
